@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=65.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "largedict"
+description = "largedict pytest with coverage"
+readme = "README.rst"
+requires-python = ">=3.7"
+authors = [
+    {name = "cvzi", email = "cuzi@openmail.cc"},
+]
+classifiers = [
+    "Programming Language :: Python",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "coverage",
+]
+
+[tool.setuptools.packages.find]
+include = ["largedict"]
+
+
+[tool.pytest.ini_options]
+pythonpath = [".", "utils"]
+testpaths = ["tests"]
+
